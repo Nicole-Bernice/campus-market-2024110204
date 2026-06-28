@@ -1,0 +1,39 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "type": "secondhand",
+      "title": "计算机全套专业教材",
+      "desc": "九成新，课堂笔记完整，无缺页",
+      "price": 45,
+      "location": "东校区图书馆",
+      "img": "https://picsum.photos/id/24/600/400"
+    },
+    {
+      "id": 2,
+      "type": "lostfound",
+      "title": "黑色校园卡丢失",
+      "desc": "6月27日一食堂丢失，卡面印有姓名",
+      "contact": "13800138000",
+      "img": "https://picsum.photos/id/1041/600/400"
+    },
+    {
+      "id": 3,
+      "type": "group",
+      "title": "奶茶拼单还差2人",
+      "desc": "东苑奶茶店满30减10，今晚20点截止",
+      "deadline": "20:00",
+      "img": "https://picsum.photos/id/1060/600/400"
+    },
+    {
+      "id": 4,
+      "type": "errand",
+      "title": "快递代取，酬劳5元",
+      "desc": "1栋快递站送到3栋宿舍，18点前送达",
+      "img": "https://picsum.photos/id/1072/600/400"
+    }
+  ],
+  "users": [],
+  "favorites": [],
+  "messages": []
+}

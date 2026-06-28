@@ -1,40 +1,52 @@
 import { createRouter, createWebHistory } from 'vue-router'
+// 导入所有页面
+import HomeView from '../views/HomeView.vue'
+import ListView from '../views/ListView.vue'
+import DetailView from '../views/DetailView.vue'
+import PublishView from '../views/PublishView.vue'
+import MessageView from '../views/MessageView.vue'
+import ProfileView from '../views/ProfileView.vue'
+import BoardView from '../views/BoardView.vue'
 
 const routes = [
   {
+    path: '/',
+    redirect: '/home'
+  },
+  {
     path: '/home',
     name: 'Home',
-    component: () => import('../views/HomeView.vue')
+    component: HomeView
   },
   {
     path: '/list',
     name: 'List',
-    component: () => import('../views/ListView.vue')
+    component: ListView
   },
   {
     path: '/detail',
     name: 'Detail',
-    component: () => import('../views/DetailView.vue')
+    component: DetailView
   },
   {
     path: '/publish',
     name: 'Publish',
-    component: () => import('../views/PublishView.vue')
+    component: PublishView
   },
   {
     path: '/message',
     name: 'Message',
-    component: () => import('../views/MessageView.vue')
+    component: MessageView
   },
   {
     path: '/profile',
     name: 'Profile',
-    component: () => import('../views/ProfileView.vue')
+    component: ProfileView
   },
   {
     path: '/board',
     name: 'Board',
-    component: () => import('../views/BoardView.vue')
+    component: BoardView
   }
 ]
 
