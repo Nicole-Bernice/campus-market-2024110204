@@ -1,39 +1,93 @@
 {
+  "users": [
+    {
+      "id": 1,
+      "nickname": "成龙小周",
+      "campus": "成龙校区",
+      "credit": 96,
+      "avatar": "https://picsum.photos/id/1001/60/60"
+    },
+    {
+      "id": 2,
+      "nickname": "狮子山阿泽",
+      "campus": "狮子山校区",
+      "credit": 92,
+      "avatar": "https://picsum.photos/id/1002/60/60"
+    }
+  ],
   "items": [
     {
       "id": 1,
       "type": "secondhand",
-      "title": "计算机全套专业教材",
-      "desc": "九成新，课堂笔记完整，无缺页",
-      "price": 45,
-      "location": "东校区图书馆",
-      "img": "https://picsum.photos/id/24/600/400"
+      "title": "大学数学教材上下册",
+      "price": 18,
+      "desc": "九成新，无大量笔记，适合大一新生",
+      "campus": "成龙校区",
+      "status": "进行中",
+      "ownerId": 1,
+      "imgUrl": "https://picsum.photos/id/20/300/200"
     },
     {
       "id": 2,
       "type": "lostfound",
-      "title": "黑色校园卡丢失",
-      "desc": "6月27日一食堂丢失，卡面印有姓名",
-      "contact": "13800138000",
-      "img": "https://picsum.photos/id/1041/600/400"
+      "title": "黑色校园一卡通",
+      "desc": "图书馆三楼自习区丢失，卡面有熊猫贴纸",
+      "campus": "狮子山校区",
+      "status": "已找回",
+      "ownerId": 2,
+      "imgUrl": "https://picsum.photos/id/42/300/200"
     },
     {
       "id": 3,
       "type": "group",
-      "title": "奶茶拼单还差2人",
-      "desc": "东苑奶茶店满30减10，今晚20点截止",
-      "deadline": "20:00",
-      "img": "https://picsum.photos/id/1060/600/400"
+      "title": "奶茶拼单，还差2人",
+      "desc": "校门口奶茶店满30减10，截止今晚21点",
+      "campus": "成龙校区",
+      "status": "进行中",
+      "deadline": "2026-07-05 21:00",
+      "ownerId": 1,
+      "imgUrl": "https://picsum.photos/id/76/300/200"
     },
     {
       "id": 4,
       "type": "errand",
-      "title": "快递代取，酬劳5元",
-      "desc": "1栋快递站送到3栋宿舍，18点前送达",
-      "img": "https://picsum.photos/id/1072/600/400"
+      "title": "快递站取件送到宿舍",
+      "desc": "快递在东门驿站，5元跑腿费，今天18点前可取",
+      "campus": "成龙校区",
+      "status": "已完成",
+      "reward": 5,
+      "deadline": "2026-06-30 18:00",
+      "ownerId": 2,
+      "imgUrl": "https://picsum.photos/id/93/300/200"
     }
   ],
-  "users": [],
   "favorites": [],
-  "messages": []
+  "conversations": [
+    {
+      "id": 1,
+      "userId1": 1,
+      "userId2": 2,
+      "createTime": "2026-06-28 14:20"
+    }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "conversationId": 1,
+      "senderId": 1,
+      "content": "这本书还在吗？可以小刀吗",
+      "msgType": "bargain",
+      "createTime": "2026-06-28 14:22"
+    }
+  ],
+  "notices": [
+    {
+      "id": 1,
+      "text": "线下交易请选择校内公共场所，拒绝校外单独见面"
+    },
+    {
+      "id": 2,
+      "text": "请勿私下微信、支付宝转账，优先校园当面交易"
+    }
+  ]
 }
