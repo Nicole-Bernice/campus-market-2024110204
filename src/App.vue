@@ -1,19 +1,17 @@
 <template>
-  <!-- 全局统一布局，所有页面共用导航 -->
-  <AppLayout />
+  <!-- 顶部全局导航，浅绿色背景 -->
+  <div style="display:flex;gap:24px;padding:12px;background:#e7f6e7;border-bottom:1px solid #eee;">
+    <RouterLink to="/">首页</RouterLink>
+    <RouterLink to="/list">综合集市</RouterLink>
+    <RouterLink to="/secondhand">闲置交易</RouterLink>
+    <RouterLink to="/lost">失物招领</RouterLink>
+    <RouterLink to="/group">拼单搭子</RouterLink>
+    <RouterLink to="/errand">跑腿委托</RouterLink>
+    <RouterLink to="/profile">个人中心</RouterLink>
+  </div>
+  <router-view />
 </template>
 
 <script setup>
-import AppLayout from './components/AppLayout.vue'
+import { RouterLink } from "vue-router";
 </script>
-
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  background-color: #f7f8fa;
-}
-</style>

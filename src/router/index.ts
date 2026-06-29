@@ -47,6 +47,27 @@ const routes = [
     path: '/board',
     name: 'Board',
     component: BoardView
+  },
+  // 下面新增四大分类路由，放进routes数组内部
+  {
+    path: "/secondhand",
+    name: "闲置交易",
+    component: () => import("@/views/SecondHand.vue")
+  },
+  {
+    path: "/lost",
+    name: "失物招领",
+    component: () => import("@/views/Lost.vue")
+  },
+  {
+    path: "/group",
+    name: "拼单搭子",
+    component: () => import("@/views/Group.vue")
+  },
+  {
+    path: "/errand",
+    name: "跑腿委托",
+    component: () => import("@/views/Errand.vue")
   }
 ]
 
