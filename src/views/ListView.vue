@@ -11,6 +11,9 @@
       </el-radio-group>
     </div>
     <div class="card-grid">
+    <div v-if="itemList.length === 0" class="empty-tip">
+      暂无对应分类的集市帖子
+    </div>
       <el-card v-for="item in itemList" :key="item.id" shadow="hover">
         <img v-if="item.img" :src="item.img" class="card-img" />
         <h3>{{ item.title }}</h3>
@@ -36,7 +39,7 @@ const loadData = async () => {
   } else {
     res = await getAllItems()
   }
-  itemList.value = res.data
+  itemList.value = res
 }
 
 watch(typeFilter, loadData)
@@ -75,5 +78,11 @@ h1 {
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 12px;
+}
+.empty-tip {
+  text-align: center;
+  font-size: 18px;
+  color: #999;
+  padding: 60px 0;
 }
 </style>
