@@ -1,93 +1,130 @@
 {
-  "users": [
-    {
-      "id": 1,
-      "nickname": "成龙小周",
-      "campus": "成龙校区",
-      "credit": 96,
-      "avatar": "https://picsum.photos/id/1001/60/60"
-    },
-    {
-      "id": 2,
-      "nickname": "狮子山阿泽",
-      "campus": "狮子山校区",
-      "credit": 92,
-      "avatar": "https://picsum.photos/id/1002/60/60"
-    }
-  ],
   "items": [
     {
       "id": 1,
       "type": "secondhand",
       "title": "大学数学教材上下册",
-      "price": 18,
-      "desc": "九成新，无大量笔记，适合大一新生",
-      "campus": "成龙校区",
-      "status": "进行中",
-      "ownerId": 1,
-      "imgUrl": "https://picsum.photos/id/20/300/200"
+      "desc": "九成新，无大量笔记，适合大一新生"
     },
     {
       "id": 2,
-      "type": "lostfound",
-      "title": "黑色校园一卡通",
-      "desc": "图书馆三楼自习区丢失，卡面有熊猫贴纸",
-      "campus": "狮子山校区",
-      "status": "已找回",
-      "ownerId": 2,
-      "imgUrl": "https://picsum.photos/id/42/300/200"
+      "type": "secondhand",
+      "title": "索尼WH-1000XM4降噪耳机",
+      "desc": "配件齐全，音质完好，无破损"
     },
     {
       "id": 3,
-      "type": "group",
-      "title": "奶茶拼单，还差2人",
-      "desc": "校门口奶茶店满30减10，截止今晚21点",
-      "campus": "成龙校区",
-      "status": "进行中",
-      "deadline": "2026-07-05 21:00",
-      "ownerId": 1,
-      "imgUrl": "https://picsum.photos/id/76/300/200"
+      "type": "secondhand",
+      "title": "戴尔27寸2K IPS显示器",
+      "desc": "八成新，无坏点，自带HDMI线"
     },
     {
       "id": 4,
-      "type": "errand",
-      "title": "快递站取件送到宿舍",
-      "desc": "快递在东门驿站，5元跑腿费，今天18点前可取",
-      "campus": "成龙校区",
-      "status": "已完成",
-      "reward": 5,
-      "deadline": "2026-06-30 18:00",
-      "ownerId": 2,
-      "imgUrl": "https://picsum.photos/id/93/300/200"
-    }
-  ],
-  "favorites": [],
-  "conversations": [
-    {
-      "id": 1,
-      "userId1": 1,
-      "userId2": 2,
-      "createTime": "2026-06-28 14:20"
-    }
-  ],
-  "messages": [
-    {
-      "id": 1,
-      "conversationId": 1,
-      "senderId": 1,
-      "content": "这本书还在吗？可以小刀吗",
-      "msgType": "bargain",
-      "createTime": "2026-06-28 14:22"
-    }
-  ],
-  "notices": [
-    {
-      "id": 1,
-      "text": "线下交易请选择校内公共场所，拒绝校外单独见面"
+      "type": "secondhand",
+      "title": "捷安特山地自行车24变速",
+      "desc": "七成新，刹车灵敏，送修车工具"
     },
     {
-      "id": 2,
-      "text": "请勿私下微信、支付宝转账，优先校园当面交易"
+      "id": 5,
+      "type": "secondhand",
+      "title": "《软件工程导论》第7版教材",
+      "desc": "少量划线，期末考试自用课本"
+    },
+    {
+      "id": 6,
+      "type": "secondhand",
+      "title": "青轴机械游戏键盘",
+      "desc": "全按键正常，附赠拔键器"
+    },
+    {
+      "id": 7,
+      "type": "lost",
+      "title": "黑色校园一卡通",
+      "desc": "图书馆三楼自习区丢失，卡面有熊猫贴纸"
+    },
+    {
+      "id": 8,
+      "type": "lost",
+      "title": "黑色皮质双肩背包",
+      "desc": "一食堂门口遗失，内有高数笔记本"
+    },
+    {
+      "id": 9,
+      "type": "lost",
+      "title": "白色AirPods二代充电盒",
+      "desc": "教学楼202教室午休时丢失"
+    },
+    {
+      "id": 10,
+      "type": "lost",
+      "title": "带蓝色吸管透明水杯",
+      "desc": "东区操场看台遗失，杯身印有校徽"
+    },
+    {
+      "id": 11,
+      "type": "lost",
+      "title": "黑色长柄雨伞",
+      "desc": "西区校门口快递站雨天遗失"
+    },
+    {
+      "id": 12,
+      "type": "group",
+      "title": "东区食堂一楼拼肠粉套餐",
+      "desc": "还差1人，满3人享折扣，截止11:45前"
+    },
+    {
+      "id": 13,
+      "type": "group",
+      "title": "万达影院周末团购电影票",
+      "desc": "还差2人，拼单均价更低，今晚截止"
+    },
+    {
+      "id": 14,
+      "type": "group",
+      "title": "校门口奶茶店满减拼单",
+      "desc": "满30减10，还差2人，今晚21点截止"
+    },
+    {
+      "id": 15,
+      "type": "group",
+      "title": "京东全球购凑单免运费",
+      "desc": "线上拼单，还差3人，明天中午截止"
+    },
+    {
+      "id": 16,
+      "type": "group",
+      "title": "水果店5斤车厘子分摊拼单",
+      "desc": "量大更划算，还差2人，今日18点截止"
+    },
+    {
+      "id": 17,
+      "type": "errand",
+      "title": "帮忙取图书馆预约书籍3本",
+      "desc": "东5-410宿舍，今晚可取，酬劳10元"
+    },
+    {
+      "id": 18,
+      "type": "errand",
+      "title": "代买炸鸡并送至宿舍",
+      "desc": "西2-116，中午送达，酬劳8元"
+    },
+    {
+      "id": 19,
+      "type": "errand",
+      "title": "打印100页毕业论文精装装订",
+      "desc": "行政楼打印店，明早取，酬劳25元"
+    },
+    {
+      "id": 20,
+      "type": "errand",
+      "title": "快递站三件包裹送到宿舍",
+      "desc": "东区宿舍楼，18点前可取，酬劳5元"
+    },
+    {
+      "id": 21,
+      "type": "errand",
+      "title": "图书馆代占靠窗自习座位",
+      "desc": "西区三楼自习室，全天占位，酬劳12元"
     }
   ]
 }
