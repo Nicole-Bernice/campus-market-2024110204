@@ -8,6 +8,7 @@
     <RouterLink to="/group">拼单搭子</RouterLink>
     <RouterLink to="/errand">跑腿委托</RouterLink>
     <RouterLink to="/profile">个人中心</RouterLink>
+    <RouterLink to="/publish">发布信息</RouterLink>
   </div>
   <router-view />
 </template>

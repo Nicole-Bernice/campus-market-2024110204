@@ -4,7 +4,6 @@
     <p>{{ item.desc }}</p>
   </el-card>
 </template>
-
 <script setup lang="ts">
 const props = defineProps<{
   item: {
