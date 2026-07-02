@@ -48,7 +48,7 @@ const routes = [
     name: 'Board',
     component: BoardView
   },
-  // 下面新增四大分类路由，放进routes数组内部
+  // 四大分类路由
   {
     path: "/secondhand",
     name: "闲置交易",
@@ -68,6 +68,15 @@ const routes = [
     path: "/errand",
     name: "跑腿委托",
     component: () => import("@/views/Errand.vue")
+  },
+  // 新增登录、注册路由
+  {
+    path: '/register',
+    component: () => import('@/views/RegisterView.vue')
+  },
+  {
+    path: '/login',
+    component: () => import('@/views/LoginView.vue')
   }
 ]
 

@@ -1,130 +1,169 @@
 {
   "items": [
     {
-      "id": 1,
+      "id": "1",
       "type": "secondhand",
       "title": "大学数学教材上下册",
       "desc": "九成新，无大量笔记，适合大一新生"
     },
     {
-      "id": 2,
+      "id": "2",
       "type": "secondhand",
       "title": "索尼WH-1000XM4降噪耳机",
       "desc": "配件齐全，音质完好，无破损"
     },
     {
-      "id": 3,
+      "id": "3",
       "type": "secondhand",
       "title": "戴尔27寸2K IPS显示器",
       "desc": "八成新，无坏点，自带HDMI线"
     },
     {
-      "id": 4,
+      "id": "4",
       "type": "secondhand",
       "title": "捷安特山地自行车24变速",
       "desc": "七成新，刹车灵敏，送修车工具"
     },
     {
-      "id": 5,
+      "id": "5",
       "type": "secondhand",
       "title": "《软件工程导论》第7版教材",
       "desc": "少量划线，期末考试自用课本"
     },
     {
-      "id": 6,
+      "id": "6",
       "type": "secondhand",
       "title": "青轴机械游戏键盘",
       "desc": "全按键正常，附赠拔键器"
     },
     {
-      "id": 7,
+      "id": "7",
       "type": "lost",
       "title": "黑色校园一卡通",
       "desc": "图书馆三楼自习区丢失，卡面有熊猫贴纸"
     },
     {
-      "id": 8,
+      "id": "8",
       "type": "lost",
       "title": "黑色皮质双肩背包",
       "desc": "一食堂门口遗失，内有高数笔记本"
     },
     {
-      "id": 9,
+      "id": "9",
       "type": "lost",
       "title": "白色AirPods二代充电盒",
       "desc": "教学楼202教室午休时丢失"
     },
     {
-      "id": 10,
+      "id": "10",
       "type": "lost",
       "title": "带蓝色吸管透明水杯",
       "desc": "东区操场看台遗失，杯身印有校徽"
     },
     {
-      "id": 11,
+      "id": "11",
       "type": "lost",
       "title": "黑色长柄雨伞",
       "desc": "西区校门口快递站雨天遗失"
     },
     {
-      "id": 12,
+      "id": "12",
       "type": "group",
       "title": "东区食堂一楼拼肠粉套餐",
       "desc": "还差1人，满3人享折扣，截止11:45前"
     },
     {
-      "id": 13,
+      "id": "13",
       "type": "group",
       "title": "万达影院周末团购电影票",
       "desc": "还差2人，拼单均价更低，今晚截止"
     },
     {
-      "id": 14,
+      "id": "14",
       "type": "group",
       "title": "校门口奶茶店满减拼单",
       "desc": "满30减10，还差2人，今晚21点截止"
     },
     {
-      "id": 15,
+      "id": "15",
       "type": "group",
       "title": "京东全球购凑单免运费",
       "desc": "线上拼单，还差3人，明天中午截止"
     },
     {
-      "id": 16,
+      "id": "16",
       "type": "group",
       "title": "水果店5斤车厘子分摊拼单",
       "desc": "量大更划算，还差2人，今日18点截止"
     },
     {
-      "id": 17,
+      "id": "17",
       "type": "errand",
       "title": "帮忙取图书馆预约书籍3本",
       "desc": "东5-410宿舍，今晚可取，酬劳10元"
     },
     {
-      "id": 18,
+      "id": "18",
       "type": "errand",
       "title": "代买炸鸡并送至宿舍",
       "desc": "西2-116，中午送达，酬劳8元"
     },
     {
-      "id": 19,
+      "id": "19",
       "type": "errand",
       "title": "打印100页毕业论文精装装订",
       "desc": "行政楼打印店，明早取，酬劳25元"
     },
     {
-      "id": 20,
+      "id": "20",
       "type": "errand",
       "title": "快递站三件包裹送到宿舍",
       "desc": "东区宿舍楼，18点前可取，酬劳5元"
     },
     {
-      "id": 21,
+      "id": "21",
       "type": "errand",
       "title": "图书馆代占靠窗自习座位",
       "desc": "西区三楼自习室，全天占位，酬劳12元"
+    },
+    {
+      "title": "收资料",
+      "desc": "收教资资料",
+      "category": "书籍",
+      "type": "",
+      "targetCount": 0,
+      "reward": 0,
+      "publisher": "student001",
+      "id": "u341XvG-FBE"
+    },
+    {
+      "title": "收教资资料",
+      "desc": "带价来",
+      "category": "书籍",
+      "type": "",
+      "targetCount": 0,
+      "reward": 0,
+      "publisher": "student001",
+      "id": "qJdM-DS1HT8"
+    },
+    {
+      "title": "收教资资料",
+      "desc": "带价来",
+      "category": "书籍",
+      "type": "secondhand",
+      "targetCount": 0,
+      "reward": 0,
+      "publisher": "student001",
+      "id": "FblOvJhIyFw"
+    },
+    {
+      "title": "找西苑库迪代取",
+      "desc": "下午一点前送到",
+      "type": "secondhand",
+      "publisher": "student001",
+      "id": "j-00RIW"
     }
-  ]
+  ],
+  "users": [],
+  "$schema": "./node_modules/json-server/schema.json"
 }
