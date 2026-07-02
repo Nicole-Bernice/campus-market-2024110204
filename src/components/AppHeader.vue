@@ -16,14 +16,25 @@
     <!-- 已登录：用户名+退出按钮 -->
     <div v-else class="user-box">
       <span>欢迎 {{ userStore.loginUser.username }}</span>
-      <button @click="userStore.logout">退出登录</button>
+      <button @click="handleLogout">退出登录</button>
     </div>
   </div>
 </template>
 
 <script setup>
 import { useUserStore } from '@/stores/user'
+import { useRouter } from 'vue-router'
+
 const userStore = useUserStore()
+const router = useRouter()
+
+// 退出登录处理函数
+const handleLogout = () => {
+  // 清空登录状态与本地存储
+  userStore.logout()
+  // 跳转到登录页面
+  router.push('/login')
+}
 </script>
 
 <style scoped>
@@ -47,5 +58,8 @@ a {
 button {
   cursor: pointer;
   padding: 4px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
 }
 </style>

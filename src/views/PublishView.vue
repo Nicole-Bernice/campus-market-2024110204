@@ -18,7 +18,14 @@
         <option value="errand">跑腿委托</option>
       </select>
     </div>
-    <button @click="submit" style="padding:10px 24px;background:#409eff;color:#fff;border:none;border-radius:4px;">提交发布</button>
+    <!-- 新增loading状态控制按钮文字+禁用，防止重复提交 -->
+    <button
+      @click="submit"
+      :disabled="submitLoading"
+      style="padding:10px 24px;background:#409eff;color:#fff;border:none;border-radius:4px;cursor:pointer;"
+    >
+      {{ submitLoading ? '提交中...' : '提交发布' }}
+    </button>
   </div>
 </template>
 
@@ -30,6 +37,9 @@ import { useRouter } from "vue-router"
 
 const userStore = useUserStore()
 const router = useRouter()
+
+// 新增提交加载状态
+const submitLoading = ref(false)
 
 // 表单数据，type自动对应分类标记
 const form = ref({
@@ -47,17 +57,20 @@ const submit = async () => {
     return
   }
 
-  alert("按钮已点击");
   if (!form.value.title || !form.value.desc) {
     alert("标题和描述不能为空！")
     return
   }
+
+  // 开启加载、锁定按钮
+  submitLoading.value = true
+
   // 组装数据，自带type用于看板统计
   const postData = {
     title: form.value.title,
     desc: form.value.desc,
     type: form.value.type,
-    publisher: userStore.loginUser.username // 修正字段
+    publisher: userStore.loginUser.username
   }
   try {
     await axios.post("http://localhost:3000/items", postData)
@@ -66,6 +79,9 @@ const submit = async () => {
   } catch (err) {
     alert("发布失败，请确认json-server正在运行")
     console.error("错误详情：", err)
+  } finally {
+    // 无论成功失败，关闭加载、解锁按钮
+    submitLoading.value = false
   }
 }
 </script>

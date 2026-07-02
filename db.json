@@ -164,6 +164,12 @@
       "id": "j-00RIW"
     }
   ],
-  "users": [],
+  "users": [
+    {
+      "username": "user",
+      "pwd": "123456",
+      "id": 1
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }

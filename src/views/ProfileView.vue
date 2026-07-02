@@ -9,6 +9,8 @@
         <p>当前登录账号：{{ userStore.loginUser.username }}</p>
       </div>
 
+      <!-- 收藏模块暂时注释，无favorite仓库会报错 -->
+      <!--
       <div style="margin-bottom:30px;">
         <h3>我的收藏</h3>
         <div v-if="favStore.favoriteIds.length === 0" style="color:#666;">暂无收藏商品</div>
@@ -20,6 +22,7 @@
           />
         </div>
       </div>
+      -->
 
       <div>
         <h3>我的发布</h3>
@@ -46,17 +49,13 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { ref, onMounted } from "vue"
 import { useUserStore } from "@/stores/user"
-import { useFavoriteStore } from "@/stores/favorite"
 import ItemCard from "@/components/ItemCard.vue"
 import { getSecondHandApi } from "@/api/secondhand"
-import { useRouter } from "vue-router"
 
-const router = useRouter()
 const userStore = useUserStore()
-const favStore = useFavoriteStore()
 const allItemList = ref([])
 
 const loadAllData = async () => {

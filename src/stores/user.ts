@@ -4,20 +4,22 @@ export const useUserStore = defineStore('user', {
     loginUser: null
   }),
   actions: {
-    // 登录保存用户
+    // 登录存储用户
     setUser(user) {
       this.loginUser = user
       localStorage.setItem('user', JSON.stringify(user))
     },
-    // 退出登录清空
-    logout() {
-      this.loginUser = null
-      localStorage.removeItem('user')
-    },
-    // 页面刷新恢复登录
+    // 刷新页面恢复登录
     recoverLogin() {
       const str = localStorage.getItem('user')
-      if(str) this.loginUser = JSON.parse(str)
+      if (str) this.loginUser = JSON.parse(str)
+    },
+    // 退出登录核心方法
+    logout() {
+      // 清空pinia内存用户
+      this.loginUser = null
+      // 删除本地持久化数据
+      localStorage.removeItem('user')
     }
   }
 })

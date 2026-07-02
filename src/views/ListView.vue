@@ -13,11 +13,12 @@
       <SearchBar @search="handleSearch" />
     </div>
 
-    <!-- 加载、错误提示 -->
-    <LoadingState :loading="loading" />
-    <ErrorState :errMsg="errMsg" />
+    <!-- 加载状态优先展示 -->
+    <LoadingState v-if="loading" />
+    <!-- 错误状态，绑定重试按钮事件 -->
+    <ErrorState v-else-if="errMsg" @retry="loadData" />
 
-    <div v-if="!loading && !errMsg" class="card-grid">
+    <div v-else class="card-grid">
       <div v-if="filterList.length === 0" class="empty-tip">
         暂无对应分类/关键词的集市帖子
       </div>
@@ -35,36 +36,35 @@
 <script setup>
 import { ref, onMounted, watch, computed } from 'vue'
 import { getAllItems, getItemsByType } from '@/api/item'
-// 导入三个通用组件
+// 导入三个通用交互组件
 import SearchBar from '@/components/SearchBar.vue'
 import LoadingState from '@/components/LoadingState.vue'
 import ErrorState from '@/components/ErrorState.vue'
 
-// 原有筛选
+// 分类筛选
 const typeFilter = ref('')
-// 新增加载、错误、搜索状态
+// 加载、报错、搜索状态
 const loading = ref(false)
 const errMsg = ref('')
 const searchKey = ref('')
-// 原始全部数据
+// 原始完整数据
 const allItemList = ref([])
 
-// 搜索+分类双重过滤
+// 分类+关键词双重过滤
 const filterList = computed(() => {
   let temp = allItemList.value
-  // 关键词过滤
   if (searchKey.value) {
     temp = temp.filter(item => item.title.includes(searchKey.value))
   }
   return temp
 })
 
-// 接收搜索输入
+// 接收搜索关键词
 const handleSearch = (val) => {
   searchKey.value = val
 }
 
-// 加载数据（增加loading、异常捕获）
+// 加载数据，捕获异常、控制loading
 const loadData = async () => {
   loading.value = true
   errMsg.value = ''
@@ -78,11 +78,13 @@ const loadData = async () => {
     allItemList.value = res
   } catch (e) {
     errMsg.value = '数据加载失败，请稍后重试'
+    console.error('集市列表加载异常：', e)
   } finally {
     loading.value = false
   }
 }
 
+// 切换分类自动重新请求
 watch(typeFilter, loadData)
 onMounted(loadData)
 </script>
